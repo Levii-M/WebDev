@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MATUDAN PORTFOLIO</title>
+
+    <style>
+        body {
+            background: linear-gradient(to bottom, skyblue, white);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            max-width: 300px;
+            height: auto;
+            border: 5px solid #fff;
+            border-radius: 50%;
+        }
+
+        h1 {
+            margin: 10px 0 10px;
+            color: black;
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 24px;
+            margin: 20px 20px 20px 20px;
+            color: black;
+        }
+        a {
+            color: dodgerblue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .button {
+            background-color: skyblue;
+            color: black;
+            font-size: 25px;
+            padding: 15px 30px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .info {
+            display: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        /* Style for table */
+        .info table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .info table th, .info table td {
+            border: 1px solid black;
+            padding: 10px;
+            color: black;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>HELLO EVERYONE... <br>THANK YOU FOR VISITING</h1>
+</header>
+
+<div class="content">
+    <img src="MatudanPic.jpg" alt="Matudan Levi P." style="max-width: 300px;">
+    <p><i>"Learn from yesterday, live for today, hope for tomorrow" - Albert Einstein </i> <br><br><br>
+    	I am Levi Matudan, Passionate about software development, web development, and cybersecurity.!!!
+    </p>
+    
+</div>
+
+<div class="buttons">
+    <button class="button" onclick="showInfo('aboutMe')">ABOUT ME</button>
+    <button class="button" onclick="showInfo('accomplishments')">MY ACCOMPLISHMENTS</button>
+    <button class="button" onclick="showInfo('interests')">FIELD OF INTEREST</button>
+    <button class="button" onclick="showInfo('contacts')">CONTACTS</button>
+</div>
+
+<div class="info" id="aboutMe">
+    <h2>About Me</h2>
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>Levi Pacoma Matudan</td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td>22 years old</td>
+        </tr>
+        <tr>
+            <td>Sex:</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Birthday:</td>
+            <td>October 03, 2001</td>
+        </tr>
+        <tr>
+            <td>Nationality:</td>
+            <td>Filipino</td>
+        </tr>
+        <tr>
+            <td>Civil Status:</td>
+            <td>Single</td>
+        </tr>
+    </table>
+</div>
+
+<div class="info" id="accomplishments">
+<h2>My Accomplishments</h2>
+	<table>
+		<tr>
+			<th>Achievement</th>
+		</tr>
+		<tr>
+			<td>Top 1 in Senior High Class from grade 11 - 12</td>
+		</tr>
+		<tr>
+			<td>Top 3 in Senior High ICT Strand</td>
+		</tr>
+		<tr>
+			<td>Best in Social Science in senior high</td>
+		</tr>
+		<tr>
+			<td>President Listers 1st year, 2nd year 1st sem...</td>
+		</tr>
+	</table>
+</div>
+
+<div class="info" id="interests">
+    <h2>Field of Interest</h2>
+    <table>
+        <tr>
+            <th>Interest</th>
+            <th>Subcategories</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Software Development and Programming</td>
+            <td>Application development</td>
+        </tr>
+        <tr>
+            <td>Web development</td>
+        </tr>
+        <tr>
+            <td>Cybersecurity</td>
+            <td>Network Security</td>
+        </tr>
+        <tr>
+            <td>IT Project Management</td>
+            <td>Managing IT Projects</td>
+        </tr>
+    </table>
+</div>
+
+<div class="info" id="contacts">
+    <h2>Contacts</h2>
+    <p>Contact No.: 09926477540</p>
+    <p>FB Account : <a href="https://www.facebook.com/levi.matudan">https://www.facebook.com/levi.matudan</a></p>
+</div>
+
+<script>
+    function showInfo(infoId) {
+        var infoSections = document.querySelectorAll('.info');
+        infoSections.forEach(function(section) {
+            section.style.display = 'none';
+        });
+        
+        var infoSection = document.getElementById(infoId);
+        if (infoSection) {
+            infoSection.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
